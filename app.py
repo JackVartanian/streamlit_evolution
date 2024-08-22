@@ -32,9 +32,6 @@ def consultInstance():
     return response.json()[0]["connectionStatus"]
 
 
-statusInstance = consultInstance()
-
-
 def connectInstance(option):
     url = "https://listmonk-evolution2.oxntyx.easypanel.host/instance/connect/" + option
     headers = {"apikey": "V24TSZWSTASDADSADSADSKHYD3"}
@@ -61,7 +58,7 @@ def convertBase64(base64_string):
 
 
 def showQrcode():
-    if statusInstance == "open":
+    if consultInstance() == "open":
         st.header("Conectado")
     else:
         st.warning("Não conectado!")
