@@ -9,12 +9,17 @@ from io import BytesIO
 
 option = st.selectbox(
     "Selecione uma opção",
-    ("Aline", "Giovanna", "Giovani", "Lorena", "Poliane", "Simara", "Jean"),
+    ("Aline", "Giovanna", "Giovani", "Lorena", "Poliane", "Simara", "Vanessa", "Jean"),
 )
+
 
 # url = "https://listmonk-evolution2.oxntyx.easypanel.host/instance/connect/" + option
 # headers = {"apikey": "V24TSZWSTASDADSADSADSKHYD3"}
-# response = requests.request("GET", url, headers=headers)
+# querystring = {"number": "5511989927965"}
+
+# # response = requests.request("GET", url, headers=headers)
+# response = requests.request("GET", url, headers=headers, params=querystring)
+
 # st.text(response.json())
 
 
