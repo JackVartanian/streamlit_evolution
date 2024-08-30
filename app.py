@@ -14,7 +14,11 @@ def consultInstance_v1():
     url = "https://chatwoot-evolutionapi.oxntyx.easypanel.host/instance/fetchInstances"
     querystring = {"instanceName": option}
     response = requests.request("GET", url, headers=headers_v1, params=querystring)
-    return response.json()["instance"]["status"]
+    st.text(response.json())
+    if response.status_code == 404:
+        return "not found"
+    else:
+        return response.json()["instance"]["status"]
 
 
 def connectInstance_v1(option):
@@ -79,7 +83,7 @@ def showQrcode_v1():
             st.rerun()
 
 
-st.latex("Versão 2")
+st.text("Versão 2")
 col1, col2 = st.columns(2)
 with col1:
     option = st.selectbox(
