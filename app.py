@@ -14,7 +14,7 @@ def consultInstance_v1():
     url = "https://chatwoot-evolutionapi.oxntyx.easypanel.host/instance/fetchInstances"
     querystring = {"instanceName": option}
     response = requests.request("GET", url, headers=headers_v1, params=querystring)
-    st.text(response.json())
+
     if response.status_code == 404:
         return "not found"
     else:
