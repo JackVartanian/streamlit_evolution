@@ -78,8 +78,7 @@ def showQrcode_v1():
         base64_string = connectInstance_v1(option)
         convertBase64(base64_string)
         if st.button("Clique para atualizar"):
-            st.caching.clear_cache()
-            st.experimental_rerun()
+            st.rerun()
 
 
 col1, col2 = st.columns(2)
