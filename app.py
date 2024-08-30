@@ -1,6 +1,4 @@
 import streamlit as st
-import pandas as pd
-import numpy as np
 import requests
 
 import base64
@@ -81,6 +79,7 @@ def showQrcode_v1():
             st.rerun()
 
 
+st.latex("Versão 2")
 col1, col2 = st.columns(2)
 with col1:
     option = st.selectbox(
@@ -94,7 +93,6 @@ with col1:
             "Simara",
             "Vanessa",
             "Jean",
-            "Teste",
         ),
     )
 
